@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advertisement Sales Prediction</title>
+</head>
+<body>
+    <h1>Predict Advertisement Sales</h1>
+    <form action="/predict" method="post">
+        <label>TV Budget:</label>
+        <input type="text" name="TV" required><br>
+        <label>Radio Budget:</label>
+        <input type="text" name="Radio" required><br>
+        <label>Newspaper Budget:</label>
+        <input type="text" name="Newspaper" required><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if pred %}
+        <h2>{{ pred }}</h2>
+    {% endif %}
+</body>
+</html>
